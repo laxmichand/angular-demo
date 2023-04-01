@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "camp",
-    "password": "msa",
+    "username": "postgres",
+    "password": "postgres",
     "database": "practice",
     "host": "127.0.0.1",
     "dialect": "postgres"

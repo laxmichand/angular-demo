@@ -1,8 +1,8 @@
 {
-  "name": "angular-demo",
+  "name": "practice",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js node --trace-warnings",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22",
     "pg": "^8.10.0",
+    "postgres": "^3.3.4",
     "sequelize": "^6.30.0",
-    "sequelize-cli": "^6.6.0"
+    "sequelize-cli": "^6.6.0",
+    "sharewatch": "^1.2.2"
   }
 }

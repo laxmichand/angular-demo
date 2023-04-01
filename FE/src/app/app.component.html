@@ -1,59 +1,14 @@
-<div class="container-fluid py-3">
-  <h1>Simple Rest Api</h1>
+<div *ngFor = "let row of title;" style="background-color: red;">
+   {{row.name | translate }}
+   {{row.id}}
+</div>
+<h2 class="text-center"> {{'login.title' | translate }} </h2>
 
-  <div class="row justify-content-center my-5">
-    <div class="col-4">
-      <form [formGroup]="reactiveForm" #form="ngForm">
-        <div class="row">
-          <div class="col mb-2">
-            <label for="name" class="form-label">Name:</label>
-            <input type="text" id="name" name="name" formControlName="name" placeholder="Your name" required
-              minlength="1" maxlength="250" class="form-control form-control-sm">
-            <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
-              <div *ngIf="name.errors?.['required']">
-                This field is required.
-              </div>
-              <div *ngIf="name.errors?.['minlength']">
-                This field must have at least 1 character.
-              </div>
-              <div *ngIf="name.errors?.['maxlength']">
-                This field must have at most 250 characters.
-              </div>
-            </div> -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="col mb-2 d-grid" style="padding:10px">
-            <button type="button" class="btn btn-sm btn-primary" style="padding:2px; margin: 5px;"
-              (click)="validate()">Validate/Add</button>
-            <button type="button" class="btn btn-sm btn-primary" style="padding:2px;margin: 5px;"
-              (click)="getData()">getAllData</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="row justify-content-center my-5">
-    <div class="col-10">
-      <div class="row">
-        <p>
-          Employee List
-        </p>
-        <table border="1">
-          <thead>
-            <th>Employee ID</th>
-            <th>Name</th>
-            <th>Actions</th>
-          </thead>
-          <tbody>
-            <tr *ngFor="let employee of employees$; let i = index">
-              <td>{{employee.id}}</td>
-              <td>{{employee.name}}</td>
-              <td><i class="bi bi-pencil-fill" style="cursor: pointer;"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-primary" (click)="useLanguage('ta')">  {{'login.button.ta' | translate}}  </button>
+  <button type="button" class="btn btn-primary" (click)="useLanguage('fr')">  {{'login.button.fr' | translate}}  </button>
+  <button type="button" class="btn btn-primary" (click)="useLanguage('zh')">  {{'login.button.zh' | translate}}  </button>
+  <button type="button" class="btn btn-primary" (click)="useLanguage('en')"> {{'login.button.en' | translate}} </button>
 </div>
